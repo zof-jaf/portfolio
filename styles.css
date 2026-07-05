@@ -1,0 +1,49 @@
+@media (max-width: 767px) {
+  #controls-carousel .overflow-hidden {
+    height: auto !important;
+    min-height: 480px; 
+    display: flex;
+  }
+
+  #controls-carousel [data-carousel-item] {
+    flex-direction: column;
+    justify-content: flex-end; 
+    height: 100%;
+  }
+
+  #controls-carousel [data-carousel-item] > img {
+    position: relative !important;
+    transform: none !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 200px; 
+    object-fit: cover;
+  }
+
+  #controls-carousel [data-carousel-item] .absolute.bg-black\/50 {
+    position: relative !important;
+    width: 100% !important;
+    right: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+    box-sizing: border-box;
+    padding: 16px !important;
+    background-color: rgba(16, 25, 45, 0.85) !important; 
+    border-radius: 0 0 8px 8px; 
+  }
+
+  #controls-carousel h2 {
+    font-size: 1.25rem !important;
+    margin-bottom: 4px;
+  }
+  
+  #controls-carousel p {
+    font-size: 0.85rem !important;
+    line-height: 1.4;
+  }
+
+  #controls-carousel button[data-carousel-prev],
+  #controls-carousel button[data-carousel-next] {
+    height: 200px !important; 
+  }
+}
