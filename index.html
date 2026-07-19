@@ -1,0 +1,1328 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Julián Florez - Portafolio Personal</title>
+
+    <!-- TAILWIND CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;850&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@450;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS Link (Vite asset processing) -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- flowbite -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-deep text-light bg-grid-glow"
+    data-bs-spy="scroll"
+    data-bs-target="#app-header"
+    data-bs-offset="120"
+  >
+    <!-- Glowing spotting background lights -->
+    <div class="bg-radial-blur" style="top: 10%; left: 8%"></div>
+    <div
+      class="bg-radial-blur"
+      style="bottom: 25%; right: 5%; opacity: 0.65"
+    ></div>
+
+    <!-- Navigation Bar / Header -->
+    <header
+      id="app-header"
+      class="fixed-top glass-header py-3 transition-all duration-300"
+      style="
+        background-color: #0c1220 !important;
+        backdrop-filter: none !important; /* Desactiva el efecto glass si lo tiene configurado */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        "
+    >
+      <div class="container d-flex align-items-center justify-content-between">
+        <!-- Logo Brand -->
+        <a
+          href="#hero"
+          class="d-flex align-items-center gap-2 text-decoration-none"
+          style="outline: none"
+        >
+          <div
+            class="logo-box d-flex align-items-center justify-content-center rounded-3 bg-primary text-white"
+          ></div>
+          <span
+            class="font-display h5 mb-0 text-white tracking-tight fw-extrabold hover-blue transition-colors"
+          >
+            Julián Flórez<span
+              class="text-primary font-mono small ms-1"
+              style="font-size: 0.72rem"
+              >.dev</span
+            >
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <nav id="desktop-nav" class="d-none d-md-flex align-items-center gap-2">
+          <a
+            class="nav-btn-custom px-3 py-2 rounded-3 text-sm font-semibold text-decoration-none active"
+            href="#hero"
+            >Inicio</a
+          >
+          <a
+            class="nav-btn-custom px-3 py-2 rounded-3 text-sm font-semibold text-decoration-none"
+            href="#projects"
+            >Proyectos</a
+          >
+          <a
+            class="nav-btn-custom px-3 py-2 rounded-3 text-sm font-semibold text-decoration-none"
+            href="#skills"
+            >Habilidades</a
+          >
+          <a
+            class="nav-btn-custom px-3 py-2 rounded-3 text-sm font-semibold text-decoration-none"
+            href="#experience"
+            >Experiencia</a
+          >
+          <a
+            class="nav-btn-custom px-3 py-2 rounded-3 text-sm font-semibold text-decoration-none"
+            href="#contact"
+            >Contacto</a
+          >
+        </nav>
+
+        <!-- CTA Work Action Button -->
+        <div class="d-none d-md-block">
+          <a
+            href="#contact"
+            class="btn btn-secondary-vibrant d-flex align-items-center gap-2 py-2 px-3.5"
+            style="font-size: 0.85rem"
+          >
+            <span>Trabajemos juntos</span>
+            <i class="bi bi-arrow-right text-primary"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button (Triggers native Bootstrap collapse menu) -->
+        <button
+          class="d-md-none btn bg-opacity-10 bg-light border border-secondary text-light p-2"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mobileNavMenu"
+          aria-controls="mobileNavMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list fs-5"></i>
+        </button>
+      </div>
+
+      <!-- Collapsible Mobile Navigation Wrapper -->
+      <div class="collapse d-md-none mt-3" id="mobileNavMenu">
+        <div
+          class="container py-3 d-flex flex-column gap-2 border-top border-secondary bg-deep rounded-3 p-3 shadow-lg"
+          style="background-color: #0c1220"
+        >
+          <a
+            class="btn border-0 text-start py-2.5 px-3 rounded-3 text-light font-semibold hover-bg-custom"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileNavMenu"
+            href="#hero"
+            >Inicio</a
+          >
+          <a
+            class="btn border-0 text-start py-2.5 px-3 rounded-3 text-light font-semibold hover-bg-custom"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileNavMenu"
+            href="#projects"
+            >Proyectos</a
+          >
+          <a
+            class="btn border-0 text-start py-2.5 px-3 rounded-3 text-light font-semibold hover-bg-custom"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileNavMenu"
+            href="#skills"
+            >Habilidades</a
+          >
+          <a
+            class="btn border-0 text-start py-2.5 px-3 rounded-3 text-light font-semibold hover-bg-custom"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileNavMenu"
+            href="#experience"
+            >Experiencia</a
+          >
+          <a
+            class="btn border-0 text-start py-2.5 px-3 rounded-3 text-light font-semibold hover-bg-custom"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileNavMenu"
+            href="#contact"
+            >Contacto</a
+          >
+
+          <div class="pt-3 mt-1 border-top border-secondary">
+            <a
+              href="#contact"
+              class="btn btn-primary-vibrant w-100 py-2.5 d-flex align-items-center justify-content-center gap-2"
+              data-bs-toggle="collapse"
+              data-bs-target="#mobileNavMenu"
+            >
+              <span>Contratar Ahora</span>
+              <i class="bi bi-arrow-right-short"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Container wrapper -->
+    <main class="w-100 overflow-hidden">
+      <!-- Hero Greeting/Intro Section -->
+      <section
+        id="hero"
+        class="d-flex align-items-center justify-content-center min-vh-100 py-5"
+      >
+        <div class="container text-center pt-5" style="max-width: 960px">
+          <!-- Availability Badge -->
+          <div class="availability-pill mb-4 mt-4">
+            <span class="availability-dot"></span>
+            <span
+              class="font-mono text-uppercase tracking-wider small"
+              style="font-size: 0.68rem; font-weight: 550"
+            >
+              Disponible para Nuevos Proyectos y Colaboraciones
+            </span>
+          </div>
+
+          <!-- Welcoming Presentation -->
+          <div class="mb-4">
+            <h3
+              class="font-mono text-uppercase tracking-widest text-primary mb-2"
+              style="font-size: 0.85rem; font-weight: 650"
+            >
+              Hola, mi nombre es
+            </h3>
+
+            <!-- Designer / Developer Name -->
+            <h3
+              class="display-2 fw-extrabold text-white mb-2"
+              style="letter-spacing: -0.03em; line-height: 1.1"
+            >
+              Julián Florez
+            </h3>
+
+            <!-- Professional Sub-label title -->
+            <h2
+              class="h3 fw-semibold text-secondary-emphasis mb-3 text-slate-muted"
+              style="color: #94a3b8"
+            >
+              Backend Developer
+            </h2>
+          </div>
+
+          <!-- Brief Narrative Bio -->
+          <p
+            class="lead text-secondary max-w-2xl mx-auto mb-4"
+            style="
+              color: #cbd5e1;
+              font-size: 1.1rem;
+              max-width: 680px;
+              line-height: 1.6;
+            "
+          >
+            Construyo la base invisible de grandes productos digitales. Código estructurado, 
+            arquitecturas escalables y la tranquilidad absoluta de contar con una plataforma estable.
+          </p>
+
+          <!-- Location Details badge -->
+          <div
+            class="d-flex align-items-center justify-content-center gap-2 mb-5 text-secondary"
+            style="font-size: 0.92rem"
+          >
+            <i class="bi bi-geo-alt text-primary"></i>
+            <span>Manizales, Colombia</span>
+          </div>
+
+          <!-- Hero Action CTAs triggers -->
+          <div
+            class="d-flex flex-wrap align-items-center justify-content-center gap-3 mb-5"
+          >
+            <a
+              href="#projects"
+              class="btn btn-primary-vibrant d-flex align-items-center gap-2"
+            >
+              <span>Ver mis proyectos</span>
+              <i class="bi bi-chevron-right"></i>
+            </a>
+
+            <a href="#contact" class="btn btn-secondary-vibrant">
+              Contáctame
+            </a>
+
+            <a
+              href="https://drive.google.com/file/d/1wBeuR44vaPr78iHrY1gYqgm9tSw0anLx/view?usp=sharing"
+              class="btn btn-link text-decoration-none text-secondary d-flex align-items-center gap-2 ms-2 hover-white transition-colors"
+              style="font-size: 0.92rem; color: #64748b"
+            >
+              <i class="bi bi-download"></i>
+              <span>Descargar CV</span>
+            </a>
+          </div>
+
+          <!-- Social media connections -->
+          <div
+            class="d-flex align-items-center justify-content-center gap-3 mb-5 pt-3"
+          >
+            <a
+              href="https://github.com/MRXjulian"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn bg-dark border border-secondary text-secondary p-0 rounded-circle hover-white transition-all d-flex align-items-center justify-content-center shadow-sm"
+              style="width: 45px; height: 45px; background-color: #0f1524"
+              aria-label="Github Julián Flórez"
+            >
+              <i class="bi bi-github fs-5"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/julian-florez-605118365/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn bg-dark border border-secondary text-secondary p-0 rounded-circle hover-white transition-all d-flex align-items-center justify-content-center shadow-sm"
+              style="width: 45px; height: 45px; background-color: #0f1524"
+              aria-label="LinkedIn Julián Flórez"
+            >
+              <i class="bi bi-linkedin fs-5"></i>
+            </a>
+            <a
+              href="mailto:floezjulian05@gmail.com"
+              class="btn bg-dark border border-secondary text-secondary p-0 rounded-circle hover-white transition-all d-flex align-items-center justify-content-center shadow-sm"
+              style="width: 45px; height: 45px; background-color: #0f1524"
+              aria-label="Enviar Correo Electrónico"
+            >
+              <i class="bi bi-envelope fs-5"></i>
+            </a>
+          </div>
+
+          <!-- Key Metrics Section -->
+<div
+            class="row g-4 pt-5 border-top border-secondary mx-auto mt-4 text-center justify-content-center"
+            style="
+              max-width: 800px;
+              border-color: #21304d !important;
+            "
+          >
+            <div class="col-12 col-md-4">
+              <div class="display-6 fw-bold text-primary mb-0">5+</div>
+              <p
+                class="font-mono text-uppercase text-secondary tracking-widest small mb-0 mt-1"
+                style="font-size: 0.68rem; letter-spacing: 0.12em"
+              >
+                Proyectos
+              </p>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="display-6 fw-bold text-primary mb-0">8+</div>
+              <p
+                class="font-mono text-uppercase text-secondary tracking-widest small mb-0 mt-1"
+                style="font-size: 0.68rem; letter-spacing: 0.12em"
+              >
+                Tecnologías
+              </p>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="display-6 fw-bold text-primary mb-0">100%</div>
+              <p
+                class="font-mono text-uppercase text-secondary tracking-widest small mb-0 mt-1"
+                style="font-size: 0.68rem; letter-spacing: 0.12em"
+              >
+                Código Limpio
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chronological Experience timeline Section -->
+      <section
+        id="experience"
+        class="section-padding bg-deep"
+        style="border-top: 1px solid #10192d"
+      >
+        <div class="container" style="max-width: 800px">
+          <!-- Experience Header -->
+          <div class="text-center mb-5">
+            <span
+              class="font-mono text-uppercase tracking-widest text-primary d-inline-block mb-2"
+              style="font-size: 0.82rem; font-weight: 650"
+            >
+              Experiencia Laboral
+            </span>
+            <h2 class="display-5 fw-bold text-white mb-3">Mi Trayectoria</h2>
+            <p
+              class="text-secondary max-w-lg mx-auto mb-0"
+              style="color: #cbd5e1; line-height: 1.6"
+            >
+              Un recorrido cronológico por mis roles y cooperaciones en el
+              desarrollo de productos.
+            </p>
+          </div>
+
+          <!-- Timeline core component nodes -->
+          <div class="experience-timeline">
+            <!-- Node 1: Innova Tech Studios -->
+            <div class="experience-node">
+              <div class="experience-marker">
+                <i
+                  class="bi bi-briefcase-fill text-white"
+                  style="font-size: 0.55rem"
+                ></i>
+              </div>
+              <div class="portfolio-card p-4">
+                <div
+                  class="d-flex flex-column flex-sm-row justify-content-between align-items-start gap-2 mb-3 pb-3 border-bottom border-light border-opacity-10"
+                >
+                  <div>
+                    <h3 class="h4 text-white fw-bold mb-1">
+                      Desarrollador Backend & IA
+                    </h3>
+                    <p
+                      class="h6 text-primary fw-semibold mb-0"
+                      style="color: #3b82f6 !important"
+                    >
+                      SCIENCE-AI
+                    </p>
+                  </div>
+                  <div
+                    class="badge d-inline-flex align-items-center gap-1.5 font-mono text-secondary py-2 px-3 rounded-3 border border-secondary"
+                    style="
+                      font-size: 0.72rem;
+                      background-color: #090d16;
+                      border-color: #21304d !important;
+                    "
+                  >
+                    <i class="bi bi-calendar-event text-primary"></i>
+                    <span>2024-2025</span>
+                  </div>
+                </div>
+
+                <!-- Bullets specifications -->
+                <ul class="list-unstyled space-y-2 mb-4">
+                  <li
+                    class="d-flex align-items-start gap-2 text-secondary mb-2"
+                    style="font-size: 0.92rem; line-height: 1.5"
+                  >
+                    <i
+                      class="bi bi-chevron-right text-primary flex-shrink-0 mt-1"
+                      style="font-size: 0.8rem"
+                    ></i>
+                    <span
+                      >Desarrollé e implementé soluciones tecnológicas avanzadas 
+                      utilizando Modelos de Lenguaje Grande (LLMs) y la estructura 
+                      de LangChain.</span
+                    >
+                  </li>
+                  <li
+                    class="d-flex align-items-start gap-2 text-secondary mb-2"
+                    style="font-size: 0.92rem; line-height: 1.5"
+                  >
+                    <i
+                      class="bi bi-chevron-right text-primary flex-shrink-0 mt-1"
+                      style="font-size: 0.8rem"
+                    ></i>
+                    <span
+                      >Diseñé la arquitectura del backend en Python, enfocándome en 
+                      el procesamiento eficiente de datos y la integración algorítmica.</span
+                    >
+                  </li>
+                  <li
+                    class="d-flex align-items-start gap-2 text-secondary mb-2"
+                    style="font-size: 0.92rem; line-height: 1.5"
+                  >
+                    <i
+                      class="bi bi-chevron-right text-primary flex-shrink-0 mt-1"
+                      style="font-size: 0.8rem"
+                    ></i>
+                    <span
+                      >Garanticé la escalabilidad y portabilidad del proyecto mediante 
+                      la dockerización completa de los servicios y la infraestructura.</span
+                    >
+                  </li>
+                </ul>
+
+                <!-- Skills tags array inside card -->
+                <div class="d-flex flex-wrap gap-1.5 pt-2">
+                  <span
+                    class="tech-tag small py-1.5 px-2.5 rounded m-0 border border-secondary"
+                    style="
+                      font-size: 0.75rem;
+                      background-color: #090d16;
+                      border-color: #21304d;
+                    "
+                    >Python</span
+                  >
+                  <span
+                    class="tech-tag small py-1.5 px-2.5 rounded m-0 border border-secondary"
+                    style="
+                      font-size: 0.75rem;
+                      background-color: #090d16;
+                      border-color: #21304d;
+                    "
+                    >LangChain</span
+                  >
+                  <span
+                    class="tech-tag small py-1.5 px-2.5 rounded m-0 border border-secondary"
+                    style="
+                      font-size: 0.75rem;
+                      background-color: #090d16;
+                      border-color: #21304d;
+                    "
+                    >Docker</span
+                  >
+                  <span
+                    class="tech-tag small py-1.5 px-2.5 rounded m-0 border border-secondary"
+                    style="
+                      font-size: 0.75rem;
+                      background-color: #090d16;
+                      border-color: #21304d;
+                    "
+                    >LLMs</span
+                  >
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects (Modular navigation built natively on Bootstrap Tab Panel) -->
+      <section
+        <section
+  id="projects"
+  class="section-padding bg-deep"
+  style="border-top: 1px solid #10192d"
+>
+  <div class="container">
+    <div
+      id="controls-carousel"
+      class="relative w-full"
+      data-carousel="static"
+    >
+      <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+        
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="https://remarkable-dolphin-0b572d.netlify.app/images/facial.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="Reconocimiento facial"
+          />
+          <div
+            class="absolute top-1/2 right-10 z-20 -translate-y-1/2 w-1/3 bg-black/50 p-6 rounded-xl text-white backdrop-blur-sm"
+          >
+            <h2 class="text-2xl font-bold">Reconocimiento facial</h2>
+            <p>Este proyecto implementa biometría avanzada mediante Python para crear sistemas de identificación precisos y modernos. Es la base ideal para desarrollar desde controles de acceso inteligentes hasta experiencias de usuario personalizadas basadas en visión artificial.</p>
+          </div>
+        </div>
+
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+  <!-- Item del carrusel -->
+  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+    <img
+      src="imgs/clima.png"
+      class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
+      alt="Clima Inteligente"
+    />
+    <div
+      class="absolute top-1/2 right-10 z-20 -translate-y-1/2 w-1/3 bg-black/60 p-6 rounded-xl text-white backdrop-blur-md"
+    >
+      <h2 class="text-2xl font-bold mb-2">Clima Inteligente V-SPA</h2>
+      <p class="text-sm md:text-base">
+        Anticipa mejores decisiones para tus viajes, actividades al aire libre y labores agrícolas. 
+        Consulta temperatura, viento y alertas interactivas en tiempo real.
+      </p>
+    </div>
+  </div>
+</div>
+
+        <div
+          class="hidden duration-700 ease-in-out"
+          data-carousel-item
+        >
+          <img
+            src="https://remarkable-dolphin-0b572d.netlify.app/images/voice.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="Dictado por voz"
+          />
+          <div
+            class="absolute top-1/2 right-10 z-20 -translate-y-1/2 w-1/3 bg-black/50 p-6 rounded-xl text-white backdrop-blur-sm"
+          >
+            <h2 class="text-2xl font-bold">Dictado por voz</h2>
+            <p>Libera tu creatividad permitiendo que tus manos descansen. Esta herramienta de dictado por voz transforma el habla en texto de forma fluida, eliminando las barreras de entrada para la redacción de documentos y mejorando drásticamente la accesibilidad digital.</p>
+          </div>
+        </div>
+
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="Space-X"
+          />
+          <div
+            class="absolute top-1/2 right-10 z-20 -translate-y-1/2 w-1/3 bg-black/50 p-6 rounded-xl text-white backdrop-blur-sm"
+          >
+            <h2 class="text-2xl font-bold">Space-X</h2>
+            <p>Lleva la innovación de la exploración espacial a la web. A través de JavaScript, este proyecto ofrece una interfaz inspirada en la tecnología de vanguardia, ideal para visualizar datos complejos con un diseño moderno y dinámico.</p>
+          </div>
+        </div>
+
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="TO-DO LIST"
+          />
+          <div
+            class="absolute top-1/2 right-10 z-20 -translate-y-1/2 w-1/3 bg-black/50 p-6 rounded-xl text-white backdrop-blur-sm"
+          >
+            <h2 class="text-2xl font-bold">TO-DO LIST</h2>
+            <p>No es solo una lista, es tu centro de comando personal. Diseñado para optimizar la productividad, este proyecto ayuda a los usuarios a conquistar el caos diario, permitiendo un seguimiento claro y estructurado de sus metas más importantes.</p>
+          </div>
+        </div>
+
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="https://remarkable-dolphin-0b572d.netlify.app/images/crud.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="Sample Crud"
+          />
+          <div
+            class="absolute top-1/2 right-10 z-20 -translate-y-1/2 w-1/3 bg-black/50 p-6 rounded-xl text-white backdrop-blur-sm"
+          >
+            <h2 class="text-2xl font-bold">Sample Crud</h2>
+            <p>La eficiencia en la gestión de datos es el corazón de toda gran empresa. Este repositorio ofrece un esqueleto robusto de CRUD (Crear, Leer, Actualizar, Borrar), garantizando que cualquier sistema de información sea fluido, organizado y escalable desde el primer día.</p>
+          </div>
+        </div>
+
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="imgs/puntos_mano.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="Seguimiento Biométrico de Manos"
+          />
+          <div
+            class="absolute top-1/2 right-10 z-20 -translate-y-1/2 w-1/3 bg-black/50 p-6 rounded-xl text-white backdrop-blur-sm"
+          >
+            <h2 class="text-2xl font-bold">Seguimiento Biométrico</h2>
+            <p>Experimenta la interacción del futuro. Este sistema de visión artificial fusiona el rastreo de articulaciones de manos en tiempo real con algoritmos de detección de bordes, creando experiencias inmersivas ideales para interfaces sin contacto.</p>
+          </div>
+        </div>
+
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="imgs/image.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="Rastreador de Gestos Bimanual"
+          />
+          <div
+            class="absolute top-1/2 right-10 z-20 -translate-y-1/2 w-1/3 bg-black/50 p-6 rounded-xl text-white backdrop-blur-sm"
+          >
+            <h2 class="text-2xl font-bold">Rastreador Gestual</h2>
+            <p>Redefine la forma en que interactuamos con las máquinas. A través del mapeo espacial de ambas manos, este software traza conexiones geométricas dinámicas simultáneas, abriendo la puerta a controles de usuario intuitivos y vanguardistas.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <button
+        type="button"
+        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-prev
+      >
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 focus:ring-4 focus:ring-white"
+        >
+          <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 1 1 5l4 4"
+            />
+          </svg>
+        </span>
+      </button>
+      
+      <button
+        type="button"
+        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-next
+      >
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 focus:ring-4 focus:ring-white"
+        >
+          <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 6 10">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 9 4-4-4-4"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+  </div>
+</section>
+      </section>
+
+      <!-- Professional Skills / Tech Stack Section -->
+      <section
+        id="skills"
+        class="section-padding bg-dark"
+        style="
+          background-color: #0b111e;
+          border-top: 1px solid rgba(255, 255, 255, 0.02);
+        "
+      >
+        <div class="container">
+          <!-- Skills Header -->
+          <div class="text-center max-w-2xl mx-auto mb-5">
+            <span
+              class="font-mono text-uppercase tracking-widest text-primary d-inline-block mb-2"
+              style="font-size: 0.82rem; font-weight: 650"
+            >
+              Habilidades & Tecnologías
+            </span>
+            <h2 class="display-5 fw-bold text-white mb-3">
+              Mi Stack Tecnológico
+            </h2>
+            <p
+              class="text-secondary mb-0"
+              style="
+                max-width: 600px;
+                margin: 0 auto;
+                color: #cbd5e1;
+                line-height: 1.6;
+              "
+            >
+              Las herramientas, lenguajes y metodologías científicas que utilizo
+              para transformar ideas abstractas en productos de software
+              robustos.
+            </p>
+          </div>
+          <div class="row g-4 mt-2 justify-content-center text-start">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div
+                class="portfolio-card h-100 p-4 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-3 bg-dark text-primary border border-secondary"
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        background-color: #090d16;
+                        border-color: #21304d !important;
+                      "
+                    >
+                      <i class="bi bi-filetype-py fs-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="h6 mb-0 text-white fw-bold">Python</h4>
+                      <span
+                        class="font-mono text-muted text-uppercase"
+                        style="font-size: 0.62rem; letter-spacing: 0.05em"
+                        >Backend && Data Science</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div
+                class="portfolio-card h-100 p-4 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-3 bg-dark text-primary border border-secondary"
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        background-color: #090d16;
+                        border-color: #21304d !important;
+                      "
+                    >
+                      <i class="bi bi-filetype-js fs-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="h6 mb-0 text-white fw-bold">JavaScript</h4>
+                      <span
+                        class="font-mono text-muted text-uppercase"
+                        style="font-size: 0.62rem; letter-spacing: 0.05em"
+                        >Backend</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div
+                class="portfolio-card h-100 p-4 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-3 bg-dark text-primary border border-secondary"
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        background-color: #090d16;
+                        border-color: #21304d !important;
+                      "
+                    >
+                      <i class="bi bi-database fs-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="h6 mb-0 text-white fw-bold">PostgreSQL</h4>
+                      <span
+                        class="font-mono text-muted text-uppercase"
+                        style="font-size: 0.62rem; letter-spacing: 0.05em"
+                        >Backend</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div
+                class="portfolio-card h-100 p-4 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-3 bg-dark text-primary border border-secondary"
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        background-color: #090d16;
+                        border-color: #21304d !important;
+                      "
+                    >
+                      <i class="bi bi-filetype-java fs-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="h6 mb-0 text-white fw-bold">Java</h4>
+                      <span
+                        class="font-mono text-muted text-uppercase"
+                        style="font-size: 0.62rem; letter-spacing: 0.05em"
+                        >BACKEND</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div
+                class="portfolio-card h-100 p-4 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-3 bg-dark text-primary border border-secondary"
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        background-color: #090d16;
+                        border-color: #21304d !important;
+                      "
+                    >
+                      <i class="bi bi-palette fs-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="h6 mb-0 text-white fw-bold">
+                        Tailwind && Bootstrap
+                      </h4>
+                      <span
+                        class="font-mono text-muted text-uppercase"
+                        style="font-size: 0.62rem; letter-spacing: 0.05em"
+                        >Frontend</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div
+                class="portfolio-card h-100 p-4 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-3 bg-dark text-primary border border-secondary"
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        background-color: #090d16;
+                        border-color: #21304d !important;
+                      "
+                    >
+                      <i class="bi bi-box-seam fs-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="h6 mb-0 text-white fw-bold">Docker</h4>
+                      <span
+                        class="font-mono text-muted text-uppercase"
+                        style="font-size: 0.62rem; letter-spacing: 0.05em"
+                        >DevOps</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div
+                class="portfolio-card h-100 p-4 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-3 bg-dark text-primary border border-secondary"
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        background-color: #090d16;
+                        border-color: #21304d !important;
+                      "
+                    >
+                      <i class="bi bi-robot fs-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="h6 mb-0 text-white fw-bold">
+                        LangChain & LLMs
+                      </h4>
+                      <span
+                        class="font-mono text-muted text-uppercase"
+                        style="font-size: 0.62rem; letter-spacing: 0.05em"
+                        >Inteligencia Artificial</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div
+                class="portfolio-card h-100 p-4 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <div
+                      class="d-flex align-items-center justify-content-center rounded-3 bg-dark text-primary border border-secondary"
+                      style="
+                        width: 44px;
+                        height: 44px;
+                        background-color: #090d16;
+                        border-color: #21304d !important;
+                      "
+                    >
+                      <i class="bi bi-git fs-5"></i>
+                    </div>
+                    <div>
+                      <h4 class="h6 mb-0 text-white fw-bold">Git & GitHub</h4>
+                      <span
+                        class="font-mono text-muted text-uppercase"
+                        style="font-size: 0.62rem; letter-spacing: 0.05em"
+                        >Herramientas</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills Call To Action Section footer -->
+          <div class="row mt-5 justify-content-center">
+            <div class="col-lg-9">
+              <div
+                class="p-4 rounded-4 border border-secondary d-flex flex-column flex-md-row align-items-center justify-content-between text-center text-md-start gap-4"
+                style="
+                  background: linear-gradient(
+                    to right,
+                    rgba(37, 99, 235, 0.08),
+                    rgba(0, 242, 254, 0.02)
+                  );
+                "
+              >
+                <div>
+                  <h4 class="h5 fw-bold text-white mb-1">
+                    ¿Buscas un stack específico para tu empresa?
+                  </h4>
+                  <p
+                    class="small text-secondary mb-0"
+                    style="color: #cbd5e1; max-width: 580px; line-height: 1.5"
+                  >
+                    Me apasiona aprender. Si tu proyecto requiere tecnologías
+                    innovadoras fuera de esta lista, tengo la destreza necesaria
+                    para dominar nuevos lenguajes y frameworks rápidamente.
+                  </p>
+                </div>
+                <a href="#contact" class="btn btn-primary-vibrant text-nowrap">
+                  Hablemos de tu Stack
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <!-- Interactive Contact Section -->
+      <section
+        id="contact"
+        class="section-padding bg-deep"
+        style="border-top: 1px solid #10192d"
+      >
+        <div class="container">
+          <!-- Contact header -->
+          <div class="text-center max-w-2xl mx-auto mb-5">
+            <span
+              class="font-mono text-uppercase tracking-widest text-primary d-inline-block mb-2"
+              style="font-size: 0.82rem; font-weight: 650"
+            >
+              ¿Tienes una propuesta interesante?
+            </span>
+            <h2 class="display-5 fw-bold text-white mb-3">
+              Comencemos algo grande
+            </h2>
+            <p
+              class="text-secondary mb-0"
+              style="
+                max-width: 600px;
+                margin: 0 auto;
+                color: #cbd5e1;
+                line-height: 1.6;
+              "
+            >
+              Siempre estoy en busca de nuevos retos, plataformas dinámicas y
+              proyectos ambiciosos. No dudes en escribirme para agendar una
+              videollamada.
+            </p>
+          </div>
+
+          <div class="row g-5 justify-content-center mt-2">
+            <!-- Cards Side Column: Contact specifications -->
+            <div class="col-12 col-lg-4">
+              <div class="d-flex flex-column gap-3">
+                <!-- Email Contact Info Card -->
+                <div class="portfolio-card p-4 d-flex align-items-center gap-4">
+                  <div
+                    class="d-flex align-items-center justify-content-center rounded-3 text-primary border border-secondary"
+                    style="
+                      width: 56px;
+                      height: 56px;
+                      background-color: #090d16;
+                      flex-shrink: 0;
+                      border-color: #21304d !important;
+                    "
+                  >
+                    <i class="bi bi-envelope fs-4"></i>
+                  </div>
+                  <div>
+                    <h4
+                      class="h6 text-muted mb-1 font-mono text-uppercase tracking-wider"
+                      style="font-size: 0.68rem; font-weight: 600"
+                    >
+                      Envíame un Correo
+                    </h4>
+                    <a
+                      href="mailto:floezjulian05@gmail.com"
+                      class="text-white text-decoration-none fw-semibold hover-blue transition-colors text-break"
+                      style="font-size: 0.95rem"
+                    >
+                      floezjulian05@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <!-- LinkedIn Connection Card -->
+                <div class="portfolio-card p-4 d-flex align-items-center gap-4">
+                  <div
+                    class="d-flex align-items-center justify-content-center rounded-3 text-primary border border-secondary"
+                    style="
+                      width: 56px;
+                      height: 56px;
+                      background-color: #090d16;
+                      flex-shrink: 0;
+                      border-color: #21304d !important;
+                    "
+                  >
+                    <i class="bi bi-linkedin fs-4"></i>
+                  </div>
+                  <div>
+                    <h4
+                      class="h6 text-muted mb-1 font-mono text-uppercase tracking-wider"
+                      style="font-size: 0.68rem; font-weight: 600"
+                    >
+                      LinkedIn Professional
+                    </h4>
+                    <a
+                      href="https://www.linkedin.com/in/julian-florez-605118365/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-white text-decoration-none fw-semibold hover-blue transition-colors"
+                      style="font-size: 0.95rem"
+                    >
+                      Conectar en LinkedIn
+                    </a>
+                  </div>
+                </div>
+
+                <!-- GitHub repository connections -->
+                <div class="portfolio-card p-4 d-flex align-items-center gap-4">
+                  <div
+                    class="d-flex align-items-center justify-content-center rounded-3 text-primary border border-secondary"
+                    style="
+                      width: 56px;
+                      height: 56px;
+                      background-color: #090d16;
+                      flex-shrink: 0;
+                      border-color: #21304d !important;
+                    "
+                  >
+                    <i class="bi bi-github fs-4"></i>
+                  </div>
+                  <div>
+                    <h4
+                      class="h6 text-muted mb-1 font-mono text-uppercase tracking-wider"
+                      style="font-size: 0.68rem; font-weight: 600"
+                    >
+                      GitHub Hub
+                    </h4>
+                    <a
+                      href="https://github.com/zof-jaf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-white text-decoration-none fw-semibold hover-blue transition-colors"
+                      style="font-size: 0.95rem"
+                    >
+                      Proyectos en Código Abierto
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form Side Column -->
+            <div class="col-12 col-lg-6">
+              <div class="portfolio-card p-4 p-md-5">
+                <h3 class="h4 fw-bold text-white mb-4">
+                  Enviar un mensaje directo
+                </h3>
+
+                <form
+                  action="https://formspree.io/f/placeholder"
+                  method="POST"
+                  class="space-y-4"
+                >
+                  <!-- Form input Row names and email -->
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6 mb-3">
+                      <label
+                        class="form-label font-mono text-uppercase text-muted"
+                        style="font-size: 0.68rem; font-weight: 600"
+                        >Tu Nombre</label
+                      >
+                      <input
+                        type="text"
+                        name="name"
+                        required
+                        class="form-control form-control-custom"
+                        placeholder="Julián"
+                      />
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                      <label
+                        class="form-label font-mono text-uppercase text-muted"
+                        style="font-size: 0.68rem; font-weight: 600"
+                        >Tu Correo</label
+                      >
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        class="form-control form-control-custom"
+                        placeholder="ejemplo@correo.com"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Asunto details -->
+                  <div class="mb-3">
+                    <label
+                      class="form-label font-mono text-uppercase text-muted"
+                      style="font-size: 0.68rem; font-weight: 600"
+                      >Asunto</label
+                    >
+                    <input
+                      type="text"
+                      name="_subject"
+                      class="form-control form-control-custom"
+                      placeholder="Asociación, Oferta de Proyecto, Consultoría"
+                    />
+                  </div>
+
+                  <!-- Text area message -->
+                  <div class="mb-4">
+                    <label
+                      class="form-label font-mono text-uppercase text-muted"
+                      style="font-size: 0.68rem; font-weight: 600"
+                      >Tu Mensaje</label
+                    >
+                    <textarea
+                      name="message"
+                      required
+                      rows="5"
+                      class="form-control form-control-custom"
+                      placeholder="Hola Julián, me gustaría coordinar una reunión contigo para hablar sobre..."
+                    ></textarea>
+                  </div>
+
+                  <!-- Submit triggers -->
+                  <div class="d-grid">
+                    <button
+                      type="submit"
+                      class="btn btn-primary-vibrant d-flex align-items-center justify-content-center gap-2"
+                    >
+                      <i class="bi bi-send-fill" style="font-size: 0.85rem"></i>
+                      <span>Enviar Mensaje</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Minimalistic Custom Footer -->
+    <footer
+      class="py-5 bg-deep"
+      style="
+        border-top: 1px solid #10192d;
+        background-color: #060a12 !important;
+      "
+    >
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-md-row align-items-center justify-content-between text-center gap-4"
+        >
+          <!-- Logo container -->
+          <div class="d-flex align-items-center gap-2">
+            <div
+              class="logo-box d-flex align-items-center justify-content-center rounded-3 bg-primary text-white"
+              style="
+                width: 28px;
+                height: 28px;
+                font-size: 0.8rem;
+                font-weight: 800;
+              "
+            >
+              <span>JF</span>
+            </div>
+            <span class="font-display text-white small fw-bold">
+              Julián Flórez
+              <span class="text-secondary font-mono" style="font-size: 0.65rem"
+                >.dev</span
+              >
+            </span>
+          </div>
+
+          <!-- Central copyright -->
+          <p
+            class="small text-secondary mb-0"
+            style="color: #64748b; font-size: 0.85rem"
+          >
+            &copy; <span id="current-year">2026</span> Julián Flórez. Construido
+            exclusivamente en HTML5 semántico y CSS Bootstrap.
+          </p>
+
+          <!-- External elements connections -->
+          <div class="d-flex align-items-center gap-3">
+            <a
+              href="https://github.com/floezjulian05"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-secondary hover-white transition-colors"
+              aria-label="Github link"
+            >
+              <i class="bi bi-github fs-5"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/floezjulian05"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-secondary hover-white transition-colors"
+              aria-label="LinkedIn link"
+            >
+              <i class="bi bi-linkedin fs-5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Automatic Footer Year Script (Very safe micro-line) -->
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+    
+  </body>
+</html>
