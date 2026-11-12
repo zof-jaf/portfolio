@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Julián Flórez">
+  <rect width="64" height="64" rx="14" fill="#0b1220"/>
+  <path d="M16 17h7v22.5c0 4.4-2.3 6.5-6.6 6.5H14v-6h1.8c1.5 0 2.2-.7 2.2-2.2V17Z" fill="#e8eef9"/>
+  <path d="M31 17h18v5.8H37.6v7.1H48v5.8H37.6V46H31V17Z" fill="#6ea0ff"/>
+</svg>

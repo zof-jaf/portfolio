@@ -1,0 +1,27 @@
+[
+  {
+    "check": "card-layout",
+    "target": "section#proyectos > div.wrap > div.project-grid",
+    "reason": "Grid de 6 proyectos uniforme es decisión explícita del brief del usuario (una sola tarjeta repetida con datos reales)."
+  },
+  {
+    "check": "card-layout",
+    "target": "section#stack > div.wrap > ul.skill-grid",
+    "reason": "Grid de herramientas del stack con 8 tarjetas idénticas es decisión de diseño del sistema visual, no un error."
+  },
+  {
+    "check": "moment-none",
+    "target": "(the page)",
+    "reason": "Página tipo servicio (--kind service): no requiere momento escénico ni narrativa scroll-linked; el hero ya entra con data-enter una sola vez."
+  },
+  {
+    "check": "section-height",
+    "target": "footer.closing",
+    "reason": "El pie de página es un cierre breve, no una sección de contenido; no debe ocupar una pantalla completa."
+  },
+  {
+    "check": "one-section",
+    "target": "footer.closing",
+    "reason": "Consecuencia directa del waiver de section-height del footer: el cierre es intencionalmente bajo y no compite con secciones de contenido."
+  }
+]
