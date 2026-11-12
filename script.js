@@ -85,6 +85,9 @@
   if (form && formStatus) {
     form.addEventListener("submit", (event) => {
       if (!form.checkValidity()) {
+        event.preventDefault();
+        const firstInvalid = form.querySelector(":invalid");
+        if (firstInvalid) firstInvalid.focus();
         return;
       }
 

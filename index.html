@@ -62,7 +62,7 @@
           aria-label="Julián Flórez, volver al inicio"
         >
           <span class="brand-mark" aria-hidden="true">JF</span>
-          <span class="brand-name">
+          <span class="brand-name" translate="no">
             Julián Flórez<span class="brand-dot">.dev</span>
           </span>
         </a>
@@ -198,7 +198,7 @@
                 <span class="code-dot code-dot--green"></span>
                 <span class="code-file">perfil.py</span>
               </div>
-              <pre><code><span class="tok-com"># perfil.py</span>
+              <pre><code translate="no"><span class="tok-com"># perfil.py</span>
 <span class="tok-key">class</span> <span class="tok-fn">BackendEngineer</span>:
     <span class="tok-key">def</span> <span class="tok-fn">__init__</span>(self):
         self.name = <span class="tok-str">"Julián Flórez"</span>
@@ -1268,7 +1268,7 @@
                       name="name"
                       type="text"
                       autocomplete="name"
-                      placeholder="Julián"
+                      placeholder="Julián…"
                       required
                     />
                   </div>
@@ -1281,7 +1281,8 @@
                       type="email"
                       autocomplete="email"
                       inputmode="email"
-                      placeholder="ejemplo@correo.com"
+                      spellcheck="false"
+                      placeholder="ejemplo@correo.com…"
                       required
                     />
                   </div>
@@ -1292,7 +1293,7 @@
                       id="contact-subject"
                       name="subject"
                       type="text"
-                      placeholder="Oferta de proyecto, consultoría, colaboración"
+                      placeholder="Oferta de proyecto, consultoría, colaboración…"
                     />
                   </div>
 
@@ -1302,7 +1303,7 @@
                       id="contact-message"
                       name="message"
                       rows="5"
-                      placeholder="Hola Julián, me gustaría coordinar una reunión para hablar sobre..."
+                      placeholder="Hola Julián, me gustaría coordinar una reunión para hablar sobre…"
                       required
                     ></textarea>
                   </div>
